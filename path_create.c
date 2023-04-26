@@ -8,7 +8,7 @@
  * Return: created path
  */
 
-char *createpath(char *dir, char *command);
+char *createpath(char *dir, char *command)
 {
 	size_t length_dir;
 	char *createpath;
@@ -25,6 +25,6 @@ char *createpath(char *dir, char *command);
 		return (NULL);
 	}
 
-	snprintf(createpath, pth_lenght, "%s/%s", dir, command);
+	snprintf(createpath, pth_length, "%s/%s", dir, command);
 	return (createpath);
 }

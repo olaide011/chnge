@@ -1,4 +1,3 @@
-
 #include "shell.h"
 
 /**
@@ -8,7 +7,7 @@
  *
  * Return: 0 Always
   */
-char *look_for(char *command, char **envp);
+char *look_for(char *command, char **envp)
 {
 	char *k_path, *dir, *kpath_c;
 	int w;
@@ -17,7 +16,7 @@ char *look_for(char *command, char **envp);
 
 	for (w = 0; envp[w] != NULL; w++)
 	{
-		if (strncmp(envp[w], "PATH=" 5) == 0)
+		if (strncmp(envp[w], "PATH=", 5) == 0)
 		{
 			k_path = envp[w] + 5;
 			break;
@@ -30,23 +29,23 @@ char *look_for(char *command, char **envp);
 	}
 	kpath_c = strdup(k_path);
 	if (kpath_c == NULL)
-	{
+	
 		return (NULL);
 	}
 	dir = strtok(kpath_c, ":");
-	while (dir != Null)
+	while (dir != NULL)
 	{
 		char *command_p = create_command_path(dir, command);
 
-		if (access(command_p, X_ok) == 0)
+		if (access(command_p, X_OK) == 0)
 		{
 			free(kpath_c);
 			dir = strtok(NULL, ":");
 		}
-		free(command_p);
+		free(command_pa);
 		dir = strtok(NULL, ":");
 	}
-	free(kpath_c)
+	free(kpath_c);
 		return (NULL);
 }
 

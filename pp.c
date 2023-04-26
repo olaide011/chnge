@@ -1,4 +1,4 @@
-#includde "shell.h"
+#include "shell.h"
 /**
  * exec_c - function
  * @args: -------
