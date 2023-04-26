@@ -1,16 +1,13 @@
-<<<<<<< HEAD
+
 #include "shell.h"
-=======
-#include "main.h"
 
 /**
- *
- * creating command path
- *
- * Return: ...
+ * createpath - create command path
+ * @dir: directory
+ * @command: input
+ * Return: created path
  */
 
->>>>>>> 5caa697e48cc78abf34c473776a5d49ea56425bf
 char *createpath(char *dir, char *command);
 {
 	size_t length_dir;

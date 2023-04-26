@@ -1,11 +1,12 @@
 
-#include "main.h"
+#include "shell.h"
 
 /**
- * finding command
- * @
+ *look_for - finding command
+ * @command: input
+ * @envp: input
  *
- * Return:
+ * Return: 0 Always
   */
 char *look_for(char *command, char **envp);
 {
