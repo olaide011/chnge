@@ -1,4 +1,12 @@
 #include "main.h"
+
+/**
+ *
+ * creating command path
+ *
+ * Return: ...
+ */
+
 char *createpath(char *dir, char *command);
 {
 	size_t length_dir;
@@ -10,12 +18,12 @@ char *createpath(char *dir, char *command);
 	c_length = strlen(command);
 	pth_length = length_dir + c_length + 2;
 	createpath = malloc(pth_length);
-	
+
 	if (createpath == NULL)
 	{
 		return (NULL);
 	}
 
-	snprintf(createpath, pth_lenght, "%s/%s", dir , command);
+	snprintf(createpath, pth_lenght, "%s/%s", dir, command);
 	return (createpath);
 }

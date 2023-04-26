@@ -1,10 +1,19 @@
 #include "main.h"
+
+/**
+ * finding command
+ * @
+ *
+ * Return:
+ */
 char *look_for(char *command, char **envp);
 {
 	char *k_path, *dir, *kpath_c;
 	int w;
+
 	k_path = NULL;
-	for(w = 0; envp[w] != NULL; w++)
+
+	for (w = 0; envp[w] != NULL; w++)
 	{
 		if (strncmp(envp[w], "PATH=" 5) == 0)
 		{
@@ -26,6 +35,7 @@ char *look_for(char *command, char **envp);
 	while (dir != Null)
 	{
 		char *command_p = create_command_path(dir, command);
+
 		if (access(command_p, X_ok) == 0)
 		{
 			free(kpath_c);
