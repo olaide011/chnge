@@ -1,4 +1,4 @@
-#include "main.h"
+#include "shell.h"
 char *look_for(char *command, char **envp);
 {
 	char *k_path, *dir, *kpath_c;

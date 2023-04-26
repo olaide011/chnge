@@ -1,4 +1,4 @@
-#include "main.h"
+#include "shell.h"
 char *createpath(char *dir, char *command);
 {
 	size_t length_dir;
